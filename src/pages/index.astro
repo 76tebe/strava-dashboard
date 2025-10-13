@@ -6,7 +6,6 @@ import Heatmap from '../components/Heatmap.svelte';
 
 const accessToken = import.meta.env.STRAVA_ACCESS_TOKEN;
 const linkAthlete = 'https://www.strava.com/api/v3/athlete';
-const linkActivities = 'https://www.strava.com/api/v3/activities';
 
 const response = await fetch(linkAthlete + '/activities?access_token=' + accessToken);
 const data = await response.json();
