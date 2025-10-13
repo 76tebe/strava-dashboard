@@ -1,11 +1,12 @@
 const clientId = import.meta.env.STRAVA_CLIENT_ID;
 const clientSecret = import.meta.env.STRAVA_CLIENT_SECRET;
 
-export async function GET({ url }) {
+export async function GET({ request }) {
+  const url = new URL(request.url);
   const code = url.searchParams.get("code");
 
   if (!code) {
-    return new Response(JSON.stringify({ error: "No autho code provided" }), {
+    return new Response(JSON.stringify({ error: "No auth code provided" }), {
       status: 400,
       headers: {
         'Content-Type': 'application/json',
