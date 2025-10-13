@@ -12,7 +12,7 @@
 
     const data = json.activities.map((a) => ({
       start_date: a.start_date,
-      moving_time: a.moving_time / 60,
+      moving_time: Math.ceil(a.moving_time / 60),
     }));
 
     cal.paint(
@@ -22,6 +22,7 @@
           type: "json",
           x: "start_date",
           y: "moving_time",
+          groupY: "sum"
         },
         date: {
           start: new Date("2025-01-01"),
