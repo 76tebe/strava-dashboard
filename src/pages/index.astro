@@ -1,19 +1,8 @@
 ---
-import Welcome from '../components/Welcome.astro';
 import Layout from '../layouts/Layout.astro';
 import Heatmap from '../components/Heatmap.svelte';
-
-
-const accessToken = import.meta.env.STRAVA_ACCESS_TOKEN;
-const linkAthlete = 'https://www.strava.com/api/v3/athlete';
-
-const response = await fetch(linkAthlete + '/activities?access_token=' + accessToken);
-const data = await response.json();
 ---
 
 <Layout>
-	<!-- <Welcome /> -->
 	 <Heatmap client:only />
-	 <a href="/api/auth/login">Login with Strava</a>
-	<p>{JSON.stringify(data)}</p>
 </Layout>
