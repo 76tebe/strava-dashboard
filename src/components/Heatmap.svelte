@@ -11,7 +11,7 @@
     const json = await response.json();
 
     const data = json.activities.map((a) => ({
-      start_date: a.start_date,
+      start_date_local: a.start_date_local,
       moving_time: Math.ceil(a.moving_time / 60),
     }));
 
@@ -20,7 +20,7 @@
         data: {
           source: data,
           type: "json",
-          x: "start_date",
+          x: "start_date_local",
           y: "moving_time",
           groupY: "sum"
         },
