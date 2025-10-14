@@ -1,6 +1,7 @@
 <script>
   import CalHeatmap from "cal-heatmap";
   import Tooltip from "cal-heatmap/plugins/Tooltip";
+  import CalendarLabel from "cal-heatmap/plugins/CalendarLabel";
   import "cal-heatmap/cal-heatmap.css";
   import { onMount } from "svelte";
 
@@ -12,7 +13,7 @@
 
     const data = json.activities.map((a) => ({
       start_date_local: a.start_date_local,
-      moving_time: Math.ceil(a.moving_time / 60),
+      distance: Math.round(a.distance / 1000 * 100) / 100,
     }));
 
     cal.paint(
@@ -21,7 +22,7 @@
           source: data,
           type: "json",
           x: "start_date_local",
-          y: "moving_time",
+          y: "distance",
           groupY: "sum"
         },
         date: {
@@ -31,7 +32,7 @@
           color: {
             type: "quantize",
             scheme: "Greens",
-            domain: [0, 20, 40, 60, 80, 100],
+            domain: [0, 5, 7.5, 10, 15, 20, 25],
           },
         },
         domain: {
@@ -56,14 +57,23 @@
           Tooltip,
           {
             text: function (date, value, dayjsDate) {
+              const roundedValue = value ? Math.round(value * 100) / 100 : 0;
               return (
-                (value ? value : "0") +
-                " minutes on " +
+                (value ? roundedValue : "0") +
+                " km on " +
                 dayjsDate.format("dddd, MMMM D, YYYY")
               );
             },
           },
         ],
+        [
+          CalendarLabel, {
+            width: 30,
+            textAlign: "start",
+            text: () => dayjs.weekdaysShort().map((d, i) => (i % 2 == 0 ? d : "")),
+            padding: [25, 0, 0, 0]
+          }
+        ]
       ]
     );
   });
