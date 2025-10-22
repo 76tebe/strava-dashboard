@@ -31,8 +31,8 @@
         scale: {
           color: {
             type: "quantize",
-            scheme: "Greens",
-            domain: [0, 5, 7.5, 10, 15, 20, 25],
+            range: ["#ACEEBB", "#4AC26B", "#2DA44E", "#116329"],
+            domain: [0, 20],
           },
         },
         domain: {
@@ -80,3 +80,15 @@
 </script>
 
 <div id="cal-heatmap"></div>
+
+<style>
+  :global(#cal-heatmap .ch-subdomain-bg) {
+    /* stroke: #CBD5E1;
+    stroke-width: 1; */
+    background-color: #EFF2F5;
+  }
+
+  /* :global(#cal-heatmap .ch-subdomain-container) {
+    overflow: visible;
+  } */
+</style>

@@ -4,5 +4,11 @@ import Heatmap from '../components/Heatmap.svelte';
 ---
 
 <Layout>
-	 <Heatmap client:only />
+	<div class="h-dvh w-full flex flex-col gap-10 items-center justify-center">
+		<div class="flex flex-col gap-2 text-center text-slate-900">
+			<h1 class="text-4xl/[120%] tracking-tight font-semibold">Miles, Sweat, and Squares</h1>
+			<p class="leading-[150%] text-slate-500">A GitHub-style heatmap for Strava, visualize your activity streaks and build your own version.</p>
+		</div>
+		<Heatmap client:only />
+	</div>
 </Layout>

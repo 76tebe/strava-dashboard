@@ -10,9 +10,11 @@
   },
   "dependencies": {
     "@astrojs/svelte": "^7.2.0",
+    "@tailwindcss/vite": "^4.1.15",
     "astro": "^5.14.1",
     "cal-heatmap": "^4.2.4",
     "svelte": "^5.39.11",
+    "tailwindcss": "^4.1.15",
     "typescript": "^5.9.3"
   }
 }
