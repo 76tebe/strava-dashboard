@@ -97,30 +97,28 @@
 </script>
 
 <div
-  class="-mx-4 sm:mx-0 w-2/3 bg-white border-2 border-slate-100 rounded-xl overflow-hidden"
+  class="-mx-4 sm:mx-0 w-fit bg-white border-2 border-slate-100 rounded-xl overflow-hidden"
 >
-  <div class="px-4 sm:px-0">
-    <div class="flex flex-col gap-4 p-4 overflow-x-auto text-nowrap">
-      {#if loading}
-        {#each Array(4) as _, i}
-          <Skeleton class="h-5 w-full rounded-sm" />
-        {/each}
-      {:else if error}
-        <div class="flex flex-col gap-2">
-          <p class="text-xs sm:text-sm">You should see my Strava data here.</p>
-          <p class="text-xs sm:text-sm">
-            Unfortunately, there is an error. Please kindly contact me or follow
-            me on <a
-              href="https://www.strava.com/athletes/122507083"
-              class="underline text-[#FC5200]">Strava</a
-            > if you find this.
-          </p>
-          <p class="text-xs sm:text-sm">Thank you!</p>
-        </div>
-      {:else}
-        <div id="cal-heatmap" class="w-fit"></div>
-      {/if}
-    </div>
+  <div class="flex flex-col gap-4 p-4 overflow-x-auto text-nowrap">
+    {#if loading}
+      {#each Array(4) as _, i}
+        <Skeleton class="h-5 w-200 rounded-sm" />
+      {/each}
+    {:else if error}
+      <div class="flex flex-col gap-2">
+        <p class="text-xs sm:text-sm">You should see my Strava data here.</p>
+        <p class="text-xs sm:text-sm">
+          Unfortunately, there is an error. Please kindly contact me or follow
+          me on <a
+            href="https://www.strava.com/athletes/122507083"
+            class="underline text-[#FC5200]">Strava</a
+          > if you find this.
+        </p>
+        <p class="text-xs sm:text-sm">Thank you!</p>
+      </div>
+    {:else}
+      <div id="cal-heatmap" class="w-fit"></div>
+    {/if}
   </div>
 </div>
 
