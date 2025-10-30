@@ -18,6 +18,8 @@ import Dock from "../components/Dock/Dock.svelte";
       </p>
     </div>
     <Heatmap client:only />
-	<Dock client:only />
+    <div class="absolute bottom-4">
+      <Dock client:only />
+    </div>
   </div>
 </Layout>
