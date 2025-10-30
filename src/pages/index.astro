@@ -1,14 +1,23 @@
 ---
-import Layout from '../layouts/Layout.astro';
-import Heatmap from '../components/Heatmap.svelte';
+import Layout from "../layouts/Layout.astro";
+import Heatmap from "../components/Heatmap.svelte";
+import Dock from "../components/Dock/Dock.svelte";
 ---
 
 <Layout>
-	<div class="h-dvh w-2/3 mx-auto flex flex-col gap-10 items-center justify-center">
-		<div class="flex flex-col gap-2 text-center text-slate-900">
-			<h1 class="text-4xl/[120%] tracking-tight font-semibold">Miles, Sweat, and Squares</h1>
-			<p class="leading-[150%] text-slate-500">A GitHub-style heatmap for Strava, visualize your activity streaks and build your own version.</p>
-		</div>
-		<Heatmap client:only />
-	</div>
+  <div
+    class="h-dvh w-2/3 mx-auto flex flex-col gap-10 items-center justify-center"
+  >
+    <div class="flex flex-col gap-2 text-center text-slate-900">
+      <h1 class="text-4xl/[120%] tracking-tight font-semibold">
+        Miles, Sweat, and Squares
+      </h1>
+      <p class="leading-[150%] text-slate-500">
+        A GitHub-style heatmap for Strava, visualize your activity streaks and
+        build your own version.
+      </p>
+    </div>
+    <Heatmap client:only />
+	<Dock client:only />
+  </div>
 </Layout>

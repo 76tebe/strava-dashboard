@@ -13,12 +13,17 @@
     "@tailwindcss/vite": "^4.1.15",
     "astro": "^5.14.1",
     "cal-heatmap": "^4.2.4",
+    "class-variance-authority": "^0.7.1",
+    "lucide-svelte": "^0.548.0",
     "svelte": "^5.39.11",
+    "svelte-motion": "^0.12.2",
     "tailwindcss": "^4.1.15",
     "typescript": "^5.9.3"
   },
   "devDependencies": {
+    "@internationalized/date": "^3.10.0",
     "@lucide/svelte": "^0.546.0",
+    "bits-ui": "^2.14.1",
     "clsx": "^2.1.1",
     "tailwind-merge": "^3.3.1",
     "tailwind-variants": "^3.1.1",
