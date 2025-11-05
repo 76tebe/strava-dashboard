@@ -49,4 +49,20 @@
       </Tooltip.Provider>
     </DockItem>
   {/each}
+  <DockItem {mouseX} {magnification} {distance}>
+    <Tooltip.Provider>
+      <Tooltip.Root>
+        <Tooltip.Trigger
+          class="hover:bg-slate-900/10 transition-all duration-200 rounded-full"
+        >
+          <a href="https://tebe.world" target="_blank">
+            <img src="https://cdn.jsdelivr.net/npm/simple-icons@v15/icons/strava.svg" alt="My Strava" class="m-3 h-5 w-5" />
+          </a>
+        </Tooltip.Trigger>
+        <Tooltip.Content sideOffset={8}>
+          <p>Portfolio Tebe</p>
+        </Tooltip.Content>
+      </Tooltip.Root>
+    </Tooltip.Provider>
+  </DockItem>
 </DockMenu>
