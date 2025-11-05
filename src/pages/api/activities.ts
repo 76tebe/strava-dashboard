@@ -1,7 +1,7 @@
 const clientId = import.meta.env.STRAVA_CLIENT_ID;
 const clientSecret = import.meta.env.STRAVA_CLIENT_SECRET;
 const refreshToken = import.meta.env.STRAVA_REFRESH_TOKEN;
-const activitiesUrl = "https://www.strava.com/api/v3/athlete/activities?per_page=200";
+const activitiesUrl = "https://www.strava.com/api/v3/athlete/activities?per_page=200&after=1735664401";
 
 async function getValidAccessToken() {
   const accessToken = import.meta.env.STRAVA_ACCESS_TOKEN;
