@@ -55,7 +55,7 @@
         <Tooltip.Trigger
           class="hover:bg-slate-900/10 transition-all duration-200 rounded-full"
         >
-          <a href="https://tebe.world" target="_blank">
+          <a href="https://www.strava.com/athletes/122507083" target="_blank">
             <img src="https://cdn.jsdelivr.net/npm/simple-icons@v15/icons/strava.svg" alt="My Strava" class="m-3 h-5 w-5" />
           </a>
         </Tooltip.Trigger>
