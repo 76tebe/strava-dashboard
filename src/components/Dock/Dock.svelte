@@ -60,7 +60,7 @@
           </a>
         </Tooltip.Trigger>
         <Tooltip.Content sideOffset={8}>
-          <p>Portfolio Tebe</p>
+          <p>My Strava</p>
         </Tooltip.Content>
       </Tooltip.Root>
     </Tooltip.Provider>
