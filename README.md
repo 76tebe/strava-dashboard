@@ -1,3 +1,5 @@
+![Strava API Integration](./src/assets/thumbnail.png)
+
 # Strava API Integration Guide
 
 A comprehensive guide for integrating Strava API into your application, from initial setup to production deployment.
